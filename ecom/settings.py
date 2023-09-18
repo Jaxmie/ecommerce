@@ -1,14 +1,14 @@
 import os
-import environ
+#import environ
 
-env = environ.Env()
+#env = environ.Env()
 
 # read the .env file
-environ.Env.read_env()
+#environ.Env.read_env()
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SECRET_KEY = env('SECRET_KEY')
-DEBUG = env('DEBUG')
+SECRET_KEY = ('fskhsvckbkcsd86326gbf8327icb79yf')
+DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -86,7 +86,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static_root")
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
-if DEBUG is False:
+""" if DEBUG is False:
     SESSION_COOKIE_SECURE = True
     SECURE_BROWSER_XSS_FILTER = True
     SECURE_CONTENT_TYPE_NOSNIFF = True
@@ -94,9 +94,9 @@ if DEBUG is False:
     SECURE_HSTS_SECONDS = 31536000
     SECURE_REDIRECT_EXEMPT = []
     SECURE_SSL_REDIRECT = True
-    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https') """
 
-    ALLOWED_HOSTS = ['www.domain.com']
+"""     ALLOWED_HOSTS = ['']
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
     DATABASES = {
@@ -108,4 +108,4 @@ if DEBUG is False:
             'HOST': '',
             'PORT': ''
         }
-    }
+    }  """
